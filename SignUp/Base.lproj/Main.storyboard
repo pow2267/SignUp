@@ -133,27 +133,27 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhF-7r-gul">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II7-v8-s09">
                                         <rect key="frame" x="0.0" y="43.5" width="189" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymt-SA-xuq">
                                         <rect key="frame" x="0.0" y="86.5" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="VTB-hg-hFh"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please, write your self introduction" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-Ie-H1s">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Please, write your self introduction" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnH-Ie-H1s">
                                 <rect key="frame" x="40" y="239" width="334" height="527"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-bI-d0N">
                                 <rect key="frame" x="40" y="806" width="334" height="50"/>
@@ -167,7 +167,7 @@
                                             <action selector="popToPrev" destination="dkD-B1-ZDf" eventType="touchUpInside" id="swd-lw-wGc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52Z-SX-zcz">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52Z-SX-zcz">
                                         <rect key="frame" x="167" y="0.0" width="167" height="50"/>
                                         <state key="normal" title="Next"/>
                                     </button>
@@ -198,7 +198,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nvd-00-qnz"/>
                     <connections>
+                        <outlet property="idField" destination="ZhF-7r-gul" id="03g-7c-pe1"/>
                         <outlet property="imageView" destination="ohW-KY-uwg" id="nxh-ef-coK"/>
+                        <outlet property="introductionField" destination="OnH-Ie-H1s" id="VDR-qB-VOb"/>
+                        <outlet property="nextButton" destination="52Z-SX-zcz" id="h72-bx-T2L"/>
+                        <outlet property="passwordCheckField" destination="ymt-SA-xuq" id="GBN-Fk-ypK"/>
+                        <outlet property="passwordField" destination="II7-v8-s09" id="m3y-1N-1oB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu1-rD-kMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

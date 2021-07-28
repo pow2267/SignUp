@@ -14,6 +14,7 @@
 		765D2C4526A4747D00F64617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765D2C4426A4747D00F64617 /* Assets.xcassets */; };
 		765D2C4826A4747D00F64617 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765D2C4626A4747D00F64617 /* LaunchScreen.storyboard */; };
 		765D2D3626AD55DB00F64617 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765D2D3526AD55DB00F64617 /* SignUpViewController.swift */; };
+		765D2D5026B1B98F00F64617 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765D2D4F26B1B98E00F64617 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		765D2C4726A4747D00F64617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765D2C4926A4747D00F64617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		765D2D3526AD55DB00F64617 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		765D2D4F26B1B98E00F64617 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				765D2C4626A4747D00F64617 /* LaunchScreen.storyboard */,
 				765D2C4926A4747D00F64617 /* Info.plist */,
 				765D2D3526AD55DB00F64617 /* SignUpViewController.swift */,
+				765D2D4F26B1B98E00F64617 /* UserInformation.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765D2D5026B1B98F00F64617 /* UserInformation.swift in Sources */,
 				765D2C4026A4747800F64617 /* ViewController.swift in Sources */,
 				765D2C3C26A4747800F64617 /* AppDelegate.swift in Sources */,
 				765D2D3626AD55DB00F64617 /* SignUpViewController.swift in Sources */,

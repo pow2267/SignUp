@@ -18,6 +18,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }()
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var idField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var passwordCheckField: UITextField!
+    @IBOutlet weak var introductionField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func popToPrev() {
         self.navigationController?.popViewController(animated: true)
@@ -44,5 +49,25 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+                
+        guard let id = self.idField.text else { return }
+        guard let password = self.passwordField.text else { return }
+        guard let passwordCheck = self.passwordCheckField.text else { return }
+        guard let introduction = self.introductionField.text else { return }
+        guard let image = self.imageView.image else { return }
+        
+        if !id.isEmpty && !password.isEmpty && !passwordCheck.isEmpty && !introduction.isEmpty {
+            if password == passwordCheck {
+                self.nextButton.isEnabled = true
+            } else {
+                self.nextButton.isEnabled = false
+            }
+        } else {
+            self.nextButton.isEnabled = false
+        }
     }
 }
