@@ -36,4 +36,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.present(self.imagePicker, animated: true, completion: nil)
         return true
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.imageView.image = image
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
