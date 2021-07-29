@@ -221,14 +221,90 @@
                     <view key="view" contentMode="scaleToFill" id="IG8-JI-bnI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-HF-Ee4">
+                                <rect key="frame" x="40" y="94" width="334" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldm-l4-1TN">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b29-Xg-oXG">
+                                        <rect key="frame" x="0.0" y="54" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QXW-EB-POU">
+                                <rect key="frame" x="40" y="212" width="334" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU5-WA-IZL">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-dj-VDp">
+                                        <rect key="frame" x="167" y="0.0" width="167" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wFf-Dc-cSj"/>
+                                </constraints>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-9B-HHn">
+                                <rect key="frame" x="40" y="272" width="334" height="294"/>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ynr-Ur-vzv">
+                                <rect key="frame" x="40" y="606" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO9-nD-tvA">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-mh-FsE">
+                                        <rect key="frame" x="118" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Prev"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7L-zd-ezi">
+                                        <rect key="frame" x="236" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Sign up"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ljc-6o-Pp7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RBf-HF-Ee4" firstAttribute="top" secondItem="ljc-6o-Pp7" secondAttribute="top" constant="50" id="FFO-Tn-35P"/>
+                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="trailing" secondItem="QXW-EB-POU" secondAttribute="trailing" constant="40" id="Gmi-vc-Bcf"/>
+                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="trailing" secondItem="ynr-Ur-vzv" secondAttribute="trailing" constant="40" id="Ked-BK-W6v"/>
+                            <constraint firstItem="ynr-Ur-vzv" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="Qqw-RP-pJk"/>
+                            <constraint firstItem="QXW-EB-POU" firstAttribute="top" secondItem="RBf-HF-Ee4" secondAttribute="bottom" constant="20" id="S7Q-ez-tkR"/>
+                            <constraint firstAttribute="trailing" secondItem="Zoi-9B-HHn" secondAttribute="trailing" constant="40" id="Xb2-Wf-W9Q"/>
+                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="bottom" secondItem="RBf-HF-Ee4" secondAttribute="bottom" constant="670" id="eSp-h1-iT0"/>
+                            <constraint firstItem="Zoi-9B-HHn" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="fDW-Ay-9IU"/>
+                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="bottom" secondItem="ynr-Ur-vzv" secondAttribute="bottom" constant="226" id="fIE-RN-5sn"/>
+                            <constraint firstItem="Zoi-9B-HHn" firstAttribute="top" secondItem="QXW-EB-POU" secondAttribute="bottom" constant="10" id="oi9-21-JDN"/>
+                            <constraint firstItem="RBf-HF-Ee4" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="osM-JM-mne"/>
+                            <constraint firstItem="ynr-Ur-vzv" firstAttribute="top" secondItem="Zoi-9B-HHn" secondAttribute="bottom" constant="40" id="uwJ-nc-OWq"/>
+                            <constraint firstItem="QXW-EB-POU" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="vFy-mj-cls"/>
+                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="trailing" secondItem="RBf-HF-Ee4" secondAttribute="trailing" constant="40" id="xF2-7I-X8U"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2LN-hJ-1BS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j3-g2-bej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="88"/>
+            <point key="canvasLocation" x="1543.4782608695652" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
