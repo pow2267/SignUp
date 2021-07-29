@@ -28,6 +28,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func touchUpNextButton() {
+        setUserInformation()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +62,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         guard let password = self.passwordField.text else { return }
         guard let passwordCheck = self.passwordCheckField.text else { return }
         guard let introduction = self.introductionField.text else { return }
-        guard let image = self.imageView.image else { return }
+        guard self.imageView.image != nil else { return }
         
         if !id.isEmpty && !password.isEmpty && !passwordCheck.isEmpty && !introduction.isEmpty {
             if password == passwordCheck {
@@ -69,5 +73,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else {
             self.nextButton.isEnabled = false
         }
+    }
+    
+    func setUserInformation() {
+        UserInformation.shared.id = self.idField.text
+        UserInformation.shared.password = self.passwordField.text
+        UserInformation.shared.introduction = self.introductionField.text
+        UserInformation.shared.image = self.imageView.image
     }
 }

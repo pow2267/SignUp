@@ -133,17 +133,17 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhF-7r-gul">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II7-v8-s09">
                                         <rect key="frame" x="0.0" y="43.5" width="189" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymt-SA-xuq">
                                         <rect key="frame" x="0.0" y="86.5" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -170,6 +170,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52Z-SX-zcz">
                                         <rect key="frame" x="167" y="0.0" width="167" height="50"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="touchUpNextButton" destination="dkD-B1-ZDf" eventType="touchUpInside" id="ZeF-7a-qRF"/>
+                                            <segue destination="hw2-dr-Pdd" kind="show" id="fY2-u1-FcJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -209,6 +213,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu1-rD-kMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="758" y="88"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="OVk-OK-fxG">
+            <objects>
+                <viewController id="hw2-dr-Pdd" customClass="DetailViewController" customModule="SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IG8-JI-bnI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ljc-6o-Pp7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2LN-hJ-1BS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9j3-g2-bej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="88"/>
         </scene>
     </scenes>
     <resources>
