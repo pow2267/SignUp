@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func popToPrev() {
+        UserInformation.shared.initData()
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -57,6 +58,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         tapGesture.delegate = self
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {

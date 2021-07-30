@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
     }()
     
     @IBAction func popToRoot() {
+        UserInformation.shared.initData()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -41,10 +42,35 @@ class DetailViewController: UIViewController {
             self.signUpButton.isEnabled = true
         }
     }
+    
+    @IBAction func touchUpSignUpButton() {
+        setUserInformation()
+        guard let viewControllers = self.navigationController?.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if viewController is ViewController {
+                self.navigationController?.popToViewController(viewController, animated: true)
+            }
+        }
+    }
+    
+    @IBAction func touchUpPrevButton() {
+        setUserInformation()
+        self.navigationController?.popViewController(animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         didDateOfBirthPickerValueChanged()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func setUserInformation() {
+        UserInformation.shared.phone = self.phoneField.text
+        UserInformation.shared.dateOfBirth = self.dateOfBirthLabel.text
     }
 }

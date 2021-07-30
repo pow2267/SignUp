@@ -15,4 +15,15 @@ class UserInformation {
     var password: String?
     var image: UIImage?
     var introduction: String?
+    var phone: String?
+    var dateOfBirth: String?
+    
+    func initData() {
+        self.id = nil
+        self.password = nil
+        self.image = nil
+        self.introduction = nil
+        self.phone = nil
+        self.dateOfBirth = nil
+    }
 }

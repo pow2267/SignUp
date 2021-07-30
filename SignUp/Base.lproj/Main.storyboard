@@ -105,6 +105,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kaw-eo-gwS"/>
+                    <connections>
+                        <outlet property="idField" destination="xfb-R8-891" id="C2z-CO-coI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,10 +300,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-mh-FsE">
                                         <rect key="frame" x="118" y="0.0" width="98" height="30"/>
                                         <state key="normal" title="Prev"/>
+                                        <connections>
+                                            <action selector="touchUpPrevButton" destination="hw2-dr-Pdd" eventType="touchUpInside" id="cdP-XS-27U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7L-zd-ezi">
                                         <rect key="frame" x="236" y="0.0" width="98" height="30"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="touchUpSignUpButton" destination="hw2-dr-Pdd" eventType="touchUpInside" id="ibq-gC-7B6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
