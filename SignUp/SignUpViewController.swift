@@ -32,6 +32,24 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         setUserInformation()
     }
     
+    @IBAction func textFieldEditingChanged() {
+        guard let id = self.idField.text else { return }
+        guard let password = self.passwordField.text else { return }
+        guard let passwordCheck = self.passwordCheckField.text else { return }
+        guard let introduction = self.introductionField.text else { return }
+        guard self.imageView.image != nil else { return }
+        
+        if !id.isEmpty && !password.isEmpty && !passwordCheck.isEmpty && !introduction.isEmpty {
+            if password == passwordCheck {
+                self.nextButton.isEnabled = true
+            } else {
+                self.nextButton.isEnabled = false
+            }
+        } else {
+            self.nextButton.isEnabled = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,26 +71,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-                
-        guard let id = self.idField.text else { return }
-        guard let password = self.passwordField.text else { return }
-        guard let passwordCheck = self.passwordCheckField.text else { return }
-        guard let introduction = self.introductionField.text else { return }
-        guard self.imageView.image != nil else { return }
-        
-        if !id.isEmpty && !password.isEmpty && !passwordCheck.isEmpty && !introduction.isEmpty {
-            if password == passwordCheck {
-                self.nextButton.isEnabled = true
-            } else {
-                self.nextButton.isEnabled = false
-            }
-        } else {
-            self.nextButton.isEnabled = false
-        }
     }
     
     func setUserInformation() {

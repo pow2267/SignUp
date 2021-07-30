@@ -134,16 +134,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged" destination="dkD-B1-ZDf" eventType="editingChanged" id="aY5-35-R6h"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II7-v8-s09">
                                         <rect key="frame" x="0.0" y="43.5" width="189" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged" destination="dkD-B1-ZDf" eventType="editingChanged" id="1Wg-AX-7vh"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Check Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymt-SA-xuq">
                                         <rect key="frame" x="0.0" y="86.5" width="189" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged" destination="dkD-B1-ZDf" eventType="editingChanged" id="nt1-xG-2bJ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -154,6 +163,9 @@
                                 <rect key="frame" x="40" y="239" width="334" height="527"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged" destination="dkD-B1-ZDf" eventType="editingChanged" id="UVJ-qT-zag"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-bI-d0N">
                                 <rect key="frame" x="40" y="806" width="334" height="50"/>
@@ -223,23 +235,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RBf-HF-Ee4">
-                                <rect key="frame" x="40" y="94" width="334" height="98"/>
+                                <rect key="frame" x="40" y="94" width="334" height="78"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldm-l4-1TN">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b29-Xg-oXG">
-                                        <rect key="frame" x="0.0" y="54" width="334" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                        <connections>
+                                            <action selector="phoneFieldEditingChanged" destination="hw2-dr-Pdd" eventType="editingChanged" id="BDL-Vi-jQd"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Spv-QY-7QW"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QXW-EB-POU">
-                                <rect key="frame" x="40" y="212" width="334" height="50"/>
+                                <rect key="frame" x="40" y="192" width="334" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU5-WA-IZL">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
@@ -247,7 +265,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-dj-VDp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATd-dj-VDp">
                                         <rect key="frame" x="167" y="0.0" width="167" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -259,7 +277,10 @@
                                 </constraints>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-9B-HHn">
-                                <rect key="frame" x="40" y="272" width="334" height="294"/>
+                                <rect key="frame" x="40" y="252" width="334" height="314"/>
+                                <connections>
+                                    <action selector="didDateOfBirthPickerValueChanged" destination="hw2-dr-Pdd" eventType="valueChanged" id="L8r-lL-a9s"/>
+                                </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ynr-Ur-vzv">
                                 <rect key="frame" x="40" y="606" width="334" height="30"/>
@@ -269,6 +290,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="popToRoot" destination="hw2-dr-Pdd" eventType="touchUpInside" id="Tma-nF-ARn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-mh-FsE">
                                         <rect key="frame" x="118" y="0.0" width="98" height="30"/>
@@ -290,7 +314,6 @@
                             <constraint firstItem="ynr-Ur-vzv" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="Qqw-RP-pJk"/>
                             <constraint firstItem="QXW-EB-POU" firstAttribute="top" secondItem="RBf-HF-Ee4" secondAttribute="bottom" constant="20" id="S7Q-ez-tkR"/>
                             <constraint firstAttribute="trailing" secondItem="Zoi-9B-HHn" secondAttribute="trailing" constant="40" id="Xb2-Wf-W9Q"/>
-                            <constraint firstItem="ljc-6o-Pp7" firstAttribute="bottom" secondItem="RBf-HF-Ee4" secondAttribute="bottom" constant="670" id="eSp-h1-iT0"/>
                             <constraint firstItem="Zoi-9B-HHn" firstAttribute="leading" secondItem="ljc-6o-Pp7" secondAttribute="leading" constant="40" id="fDW-Ay-9IU"/>
                             <constraint firstItem="ljc-6o-Pp7" firstAttribute="bottom" secondItem="ynr-Ur-vzv" secondAttribute="bottom" constant="226" id="fIE-RN-5sn"/>
                             <constraint firstItem="Zoi-9B-HHn" firstAttribute="top" secondItem="QXW-EB-POU" secondAttribute="bottom" constant="10" id="oi9-21-JDN"/>
@@ -301,6 +324,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2LN-hJ-1BS"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="iO9-nD-tvA" id="bq0-Ff-pVZ"/>
+                        <outlet property="dateOfBirthLabel" destination="ATd-dj-VDp" id="JbF-ub-0Xn"/>
+                        <outlet property="dateOfBirthPicker" destination="Zoi-9B-HHn" id="SRW-AS-Uoo"/>
+                        <outlet property="phoneField" destination="b29-Xg-oXG" id="M1w-ys-cxb"/>
+                        <outlet property="prevButton" destination="ksX-mh-FsE" id="0u8-2e-Nlj"/>
+                        <outlet property="signUpButton" destination="P7L-zd-ezi" id="nRs-2O-PZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j3-g2-bej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
