@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    // review: 클로져를 활용하여 초기화해주셨네요. 잘 하셨습니다!
+    // 한 눈에 들어와서 읽기 좋은 것 같습니다.
     let dateFormatter: DateFormatter = {
         let formatter: DateFormatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -49,6 +51,9 @@ class DetailViewController: UIViewController {
     // UserInformation에 데이터 저장 및 root view로 이동
     @IBAction func touchUpSignUpButton() {
         setUserInformation()
+        
+        // review: 첫 화면으로 돌아가기 위한 로직을 구현해주셨네요.
+        // UINavigationController의 popToRootViewController(:animated:) 메서드를 사용하면 간결하게 작성 가능합니다.
         guard let viewControllers = self.navigationController?.viewControllers else { return }
         
         for viewController in viewControllers {
@@ -72,6 +77,11 @@ class DetailViewController: UIViewController {
     
     // text field 밖 터치 시 키보드 내림
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // review: override method를 작성 시에는 super의 호출이 필요한 지 꼼꼼히 살펴볼 필요가 있습니다.
+        // 해당 메서드의 document를 보면 아래와 같은 내용을 확인할 수 있습니다.
+        // "If you override this method without calling super (a common use pattern), you must also override the other methods for handling touch events, even if your implementations do nothing."
+        // 따라서, super의 메서드 호출이 필요합니다.
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
